@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<style>
+    * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+        align-content: center;
+    }
+
+    .http-error {
+        width: 100%;
+        line-height: 1.4;
+        padding: 110px 40px;
+        text-align: center;
+        background: #fff;
+    }
+
+    .http-error .http-code {
+        position: relative;
+        height: 180px;
+    }
+
+    .http-error .http-code h1 {
+        font-family: 'Roboto', sans-serif;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        font-size: 165px;
+        font-weight: 700;
+        margin: 0px;
+        color: #262626;
+        text-transform: uppercase;
+    }
+
+    .http-error .http-code h1>span {
+        color: #00b7ff;
+    }
+
+    .http-error h2 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 22px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #151515;
+        margin-top: 0px;
+        margin-bottom: 25px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+
+        .http-error,
+        body {
+            background: #262626;
+        }
+
+        .http-error .http-code h1 {
+            color: #efefef;
+        }
+
+        .http-error .http-code h1>span {
+            color: #00b7ff;
+        }
+
+        .http-error h2 {
+            color: #e9e9e9;
+        }
+    }
+</style>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+    <title>Error</title>
+</head>
+
+<body>
+    <div class="http-error">
+        <div class="http-code">
+            <h1>{{error_code}}</h1>
+        </div>
+        <h2>{{error_message}}</h2>
+    </div>
+</body>
+
+</html>
