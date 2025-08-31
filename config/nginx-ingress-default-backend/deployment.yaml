@@ -22,7 +22,7 @@ spec:
         - containerPort: 80
         volumeMounts:
         - name: nginx-ingress-error-page-source
-          mountPath: /usr/share/nginx/html
+          mountPath: /usr/share/nginx/html/index.html
           readOnly: true
           subPath: index.html
         - name: nginx-ingress-error-page-source
